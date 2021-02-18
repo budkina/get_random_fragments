@@ -4,14 +4,12 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 from Bio.SeqRecord import SeqRecord
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument("input", nargs='?', help="Input fasta file")
 parser.add_argument('--fragment_len_min', help='Minimum fragment length, default = 300', default=300)
 parser.add_argument('--fragment_len_max', help='Maximum fragment length, default = 1000', default=1000)
 parser.add_argument('--fragments_per_record', help='Number of random fragment for a single fasta record, default = 10', default=10)
 parser.add_argument('--output', help='Output fasta file')
-
 args = parser.parse_args()
 
 fasta_filename = args.input
