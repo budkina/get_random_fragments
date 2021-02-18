@@ -52,7 +52,7 @@ for record in fasta_io:
         if 'N' in fragment: 
             continue
         
-        record_fragments.append(SeqRecord(fragment, id=current_id+' '+str(fragment_position),description = ''))
+        record_fragments.append(SeqRecord(fragment, id=current_id+'_'+str(fragment_position),description = ''))
     
     # append fragments to output
     fragments+=record_fragments
