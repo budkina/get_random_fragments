@@ -90,6 +90,6 @@ for record in fasta_io:
     fragments+=record_fragments
 
 # write output
-output_handle = open(output_fasta_filename,"w")
-SeqIO.write(fragments,output_handle,"fasta")        
-print("Result is in " + output_fasta_filename)
+with open(output_fasta_filename,"w") as output_handle:
+    SeqIO.write(fragments,output_handle,"fasta")        
+    print("Result is in " + output_fasta_filename)
